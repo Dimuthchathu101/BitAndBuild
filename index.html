@@ -3,513 +3,415 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="QualityPilot - Advanced technical blog covering software development, coding tutorials, and tech insights">
-    <meta name="keywords" content="programming, software development, coding, tutorials, tech blog">
-    <meta name="author" content="QualityPilot">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://qualitypilot.com/">
-    <meta property="og:title" content="QualityPilot - Technical Blog">
-    <meta property="og:description" content="Advanced technical blog covering software development, coding tutorials, and tech insights">
-    <meta property="og:image" content="https://qualitypilot.com/images/og-image.jpg">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://qualitypilot.com/">
-    <meta property="twitter:title" content="QualityPilot - Technical Blog">
-    <meta property="twitter:description" content="Advanced technical blog covering software development, coding tutorials, and tech insights">
-    <meta property="twitter:image" content="https://qualitypilot.com/images/og-image.jpg">
-
-    <title>QualityPilot - Advanced Technical Blog</title>
+    <meta name="description" content="QualityPilot - Site Under Maintenance">
+    <title>Site Under Maintenance - QualityPilot</title>
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/prism.css">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <!-- Schema.org structured data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "QualityPilot",
-        "description": "Advanced technical blog covering software development, coding tutorials, and tech insights",
-        "url": "https://qualitypilot.com",
-        "publisher": {
-            "@type": "Organization",
-            "name": "QualityPilot"
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-    }
-    </script>
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .maintenance-container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 3rem;
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .maintenance-container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            animation: shimmer 3s infinite;
+            pointer-events: none;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #667eea;
+        }
+
+        .logo-icon {
+            font-size: 2.5rem;
+            margin-right: 0.5rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .maintenance-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            animation: wrench 2s infinite;
+        }
+
+        @keyframes wrench {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-15deg); }
+            75% { transform: rotate(15deg); }
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .progress-container {
+            background: #f0f0f0;
+            border-radius: 12px;
+            height: 8px;
+            margin: 2rem 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-bar {
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            height: 100%;
+            border-radius: 12px;
+            animation: progress 3s ease-in-out infinite;
+            position: relative;
+        }
+
+        .progress-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            animation: progress-shine 2s infinite;
+        }
+
+        @keyframes progress {
+            0%, 100% { width: 30%; }
+            50% { width: 70%; }
+        }
+
+        @keyframes progress-shine {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .status-info {
+            background: rgba(102, 126, 234, 0.1);
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .status-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .status-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .status-label {
+            color: #666;
+        }
+
+        .status-value {
+            font-weight: 600;
+            color: #667eea;
+        }
+
+        .estimated-time {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            font-weight: 600;
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        .contact-info {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-info h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-link {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            background: rgba(102, 126, 234, 0.1);
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(102, 126, 234, 0.2);
+        }
+
+        .contact-link:hover {
+            background: rgba(102, 126, 234, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+        }
+
+        .floating-shapes {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .shape {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .shape:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .shape:nth-child(2) {
+            width: 120px;
+            height: 120px;
+            top: 60%;
+            right: 10%;
+            animation-delay: 2s;
+        }
+
+        .shape:nth-child(3) {
+            width: 60px;
+            height: 60px;
+            bottom: 20%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+
+        @media (max-width: 768px) {
+            .maintenance-container {
+                padding: 2rem;
+                margin: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .maintenance-icon {
+                font-size: 3rem;
+            }
+
+            .contact-links {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
 </head>
-<body class="light-theme">
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <nav class="nav">
-                <div class="nav-brand">
-                    <a href="index.html" class="logo">
-                        <span class="logo-icon">⚡</span>
-                        <span class="logo-text">QualityPilot</span>
-                    </a>
-                </div>
-                
-                <div class="nav-menu" id="nav-menu">
-                    <ul class="nav-list">
-                        <li class="nav-item">
-                            <a href="index.html" class="nav-link active">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="articles.html" class="nav-link">Articles</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="categories.html" class="nav-link">Categories</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#portfolio" class="nav-link">Portfolio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="about.html" class="nav-link">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="contact.html" class="nav-link">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="nav-actions">
-                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
-                        <span class="theme-icon light">🌙</span>
-                        <span class="theme-icon dark">☀️</span>
-                    </button>
-                    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                </div>
-            </nav>
+<body>
+    <!-- Floating Background Shapes -->
+    <div class="floating-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <div class="maintenance-container">
+        <!-- Logo -->
+        <div class="logo">
+            <span class="logo-icon">⚡</span>
+            <span class="logo-text">QualityPilot</span>
         </div>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    Advanced Technical Blog
-                    <span class="hero-subtitle">Insights, Tutorials & Code</span>
-                </h1>
-                <p class="hero-description">
-                    Explore cutting-edge software development techniques, programming tutorials, 
-                    and technical insights from industry experts.
-                </p>
-                <div class="hero-actions">
-                    <a href="articles.html" class="btn btn-primary">Browse Articles</a>
-                    <a href="about.html" class="btn btn-secondary">Learn More</a>
-                </div>
+        <!-- Maintenance Icon -->
+        <div class="maintenance-icon">🔧</div>
+
+        <!-- Main Content -->
+        <h1>Site Under Maintenance</h1>
+        <p class="subtitle">
+            We're currently performing some upgrades to bring you an even better experience. 
+            Our team is working hard to get everything back up and running smoothly.
+        </p>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar"></div>
+        </div>
+
+        <!-- Status Information -->
+        <div class="status-info">
+            <div class="status-item">
+                <span class="status-label">Maintenance Status:</span>
+                <span class="status-value">In Progress</span>
             </div>
-            <div class="hero-visual">
-                <div class="code-preview">
-                    <div class="code-header">
-                        <span class="code-dot red"></span>
-                        <span class="code-dot yellow"></span>
-                        <span class="code-dot green"></span>
-                        <span class="code-title">main.js</span>
-                    </div>
-                    <pre class="code-content"><code class="language-javascript">// Modern JavaScript Patterns
-const createComponent = (config) => {
-  return {
-    render: () => config.template,
-    state: config.initialState,
-    methods: config.methods
-  };
-};
-
-// Functional Programming
-const compose = (...fns) => 
-  fns.reduce((f, g) => (...args) => f(g(...args)));
-
-// Async/Await Pattern
-async function fetchData() {
-  try {
-    const response = await api.get('/data');
-    return response.data;
-  } catch (error) {
-    console.error('Error:', error);
-  }
-}</code></pre>
-                </div>
+            <div class="status-item">
+                <span class="status-label">SQLite Database:</span>
+                <span class="status-value">Optimizing</span>
+            </div>
+            <div class="status-item">
+                <span class="status-label">Security Updates:</span>
+                <span class="status-value">Installing</span>
+            </div>
+            <div class="status-item">
+                <span class="status-label">Performance:</span>
+                <span class="status-value">Enhancing</span>
             </div>
         </div>
-    </section>
 
-    <!-- Portfolio Section -->
-    <section class="portfolio" id="portfolio">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Our Portfolio</h2>
-                <p class="section-subtitle">Showcasing our latest projects and work</p>
-            </div>
-            
-            <div class="portfolio-grid">
-                <div class="portfolio-card">
-                    <div class="portfolio-image">
-                        <img src="https://picsum.photos/800/600?random=1" alt="E-commerce Website" loading="lazy">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-links">
-                                <a href="https://github.com/yourusername/ecommerce-project" target="_blank" class="portfolio-link">
-                                    <i class="fas fa-github"></i> GitHub
-                                </a>
-                                <a href="https://ecommerce-demo.com" target="_blank" class="portfolio-link">
-                                    <i class="fas fa-external-link-alt"></i> Live Demo
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <h3 class="portfolio-title">E-commerce Platform</h3>
-                        <p class="portfolio-description">
-                            A full-stack e-commerce platform built with React and Node.js. Features include user authentication, 
-                            product management, payment integration, and admin dashboard.
-                        </p>
-                        <div class="portfolio-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">MongoDB</span>
-                            <span class="tech-tag">Stripe</span>
-                        </div>
-                    </div>
-                </div>
+        <!-- Estimated Time -->
+        <div class="estimated-time">
+            ⏱️ Estimated completion: 2-3 Days
+        </div>
 
-                <div class="portfolio-card">
-                    <div class="portfolio-image">
-                        <img src="https://picsum.photos/800/600?random=2" alt="Task Management App" loading="lazy">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-links">
-                                <a href="https://github.com/yourusername/task-app" target="_blank" class="portfolio-link">
-                                    <i class="fas fa-github"></i> GitHub
-                                </a>
-                                <a href="https://task-app-demo.com" target="_blank" class="portfolio-link">
-                                    <i class="fas fa-external-link-alt"></i> Live Demo
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <h3 class="portfolio-title">Task Management App</h3>
-                        <p class="portfolio-description">
-                            A responsive task management application with drag-and-drop functionality, 
-                            real-time updates, and team collaboration features.
-                        </p>
-                        <div class="portfolio-tech">
-                            <span class="tech-tag">Vue.js</span>
-                            <span class="tech-tag">Firebase</span>
-                            <span class="tech-tag">Tailwind CSS</span>
-                            <span class="tech-tag">Socket.io</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-card">
-                    <div class="portfolio-image">
-                        <img src="https://picsum.photos/800/600?random=3" alt="Weather Dashboard" loading="lazy">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-links">
-                                <a href="https://github.com/yourusername/weather-app" target="_blank" class="portfolio-link">
-                                    <i class="fas fa-github"></i> GitHub
-                                </a>
-                                <a href="https://weather-dashboard.com" target="_blank" class="portfolio-link">
-                                    <i class="fas fa-external-link-alt"></i> Live Demo
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <h3 class="portfolio-title">Weather Dashboard</h3>
-                        <p class="portfolio-description">
-                            A weather application that displays current conditions and forecasts using 
-                            OpenWeatherMap API and Chart.js for data visualization.
-                        </p>
-                        <div class="portfolio-tech">
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Chart.js</span>
-                            <span class="tech-tag">Weather API</span>
-                            <span class="tech-tag">CSS Grid</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-card">
-                    <div class="portfolio-image">
-                        <img src="https://picsum.photos/800/600?random=4" alt="Technical Blog" loading="lazy">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-links">
-                                <a href="https://github.com/yourusername/tech-blog" target="_blank" class="portfolio-link">
-                                    <i class="fas fa-github"></i> GitHub
-                                </a>
-                                <a href="index.html" class="portfolio-link">
-                                    <i class="fas fa-external-link-alt"></i> Live Demo
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <h3 class="portfolio-title">Technical Blog Platform</h3>
-                        <p class="portfolio-description">
-                            A modern technical blog with advanced features including syntax highlighting, 
-                            dark/light themes, search functionality, and responsive design.
-                        </p>
-                        <div class="portfolio-tech">
-                            <span class="tech-tag">HTML5</span>
-                            <span class="tech-tag">CSS3</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Prism.js</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="section-footer">
-                <a href="https://github.com/yourusername" target="_blank" class="btn btn-outline">
-                    <i class="fab fa-github"></i> View More on GitHub
+        <!-- Contact Information -->
+        <div class="contact-info">
+            <h3>Need immediate assistance?</h3>
+            <div class="contact-links">
+                <a href="mailto:support@qualitypilot.com" class="contact-link">
+                    📧 Email Support
+                </a>
+                <a href="https://twitter.com/qualitypilot" class="contact-link" target="_blank">
+                    🐦 Twitter Updates
+                </a>
+                <a href="https://github.com/qualitypilot" class="contact-link" target="_blank">
+                    📦 GitHub Status
                 </a>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Featured Articles -->
-    <section class="featured-articles">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Featured Articles</h2>
-                <p class="section-subtitle">Latest insights and tutorials</p>
-            </div>
-            
-            <div class="articles-grid">
-                <article class="article-card featured">
-                    <div class="article-image">
-                        <img src="images/erp-testmaster.jpg" alt="ERP TestMaster Framework" loading="lazy">
-                        <div class="article-category">Testing</div>
-                    </div>
-                    <div class="article-content">
-                        <div class="article-meta">
-                            <span class="article-date">Dec 15, 2024</span>
-                            <span class="article-read-time">12 min read</span>
-                        </div>
-                        <h3 class="article-title">
-                            <a href="posts/erp-testmaster-automation-framework.html">ERP TestMaster: Building a Comprehensive Test Automation Framework</a>
-                        </h3>
-                        <p class="article-excerpt">
-                            Learn how to build a robust test automation framework for Enterprise Resource Planning systems 
-                            using Playwright, GitHub Actions, and Allure Reporting.
-                        </p>
-                        <div class="article-tags">
-                            <span class="tag">Test Automation</span>
-                            <span class="tag">ERP</span>
-                            <span class="tag">Playwright</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="article-card">
-                    <div class="article-image">
-                        <img src="images/react-patterns.jpg" alt="React Design Patterns" loading="lazy">
-                        <div class="article-category">React</div>
-                    </div>
-                    <div class="article-content">
-                        <div class="article-meta">
-                            <span class="article-date">Dec 14, 2024</span>
-                            <span class="article-read-time">8 min read</span>
-                        </div>
-                        <h3 class="article-title">
-                            <a href="posts/react-design-patterns.html">Advanced React Design Patterns for Scalable Applications</a>
-                        </h3>
-                        <p class="article-excerpt">
-                            Explore advanced React patterns including compound components, render props, 
-                            and custom hooks for building maintainable and scalable applications.
-                        </p>
-                        <div class="article-tags">
-                            <span class="tag">React</span>
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">Design Patterns</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="article-card">
-                    <div class="article-image">
-                        <img src="images/typescript-advanced.jpg" alt="TypeScript Advanced Features" loading="lazy">
-                        <div class="article-category">TypeScript</div>
-                    </div>
-                    <div class="article-content">
-                        <div class="article-meta">
-                            <span class="article-date">Dec 12, 2024</span>
-                            <span class="article-read-time">12 min read</span>
-                        </div>
-                        <h3 class="article-title">
-                            <a href="posts/typescript-advanced-features.html">Mastering TypeScript Advanced Features</a>
-                        </h3>
-                        <p class="article-excerpt">
-                            Deep dive into TypeScript's advanced type system, conditional types, 
-                            and utility types for better type safety.
-                        </p>
-                        <div class="article-tags">
-                            <span class="tag">TypeScript</span>
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">Type Safety</span>
-                        </div>
-                    </div>
-                </article>
-            </div>
-            
-            <div class="section-footer">
-                <a href="articles.html" class="btn btn-outline">View All Articles</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Categories Section -->
-    <section class="categories">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Explore Categories</h2>
-                <p class="section-subtitle">Find content by topic</p>
-            </div>
-            
-            <div class="categories-grid">
-                <a href="categories.html#frontend" class="category-card">
-                    <div class="category-icon">🎨</div>
-                    <h3 class="category-title">Frontend</h3>
-                    <p class="category-description">React, Vue, Angular, CSS, and modern web development</p>
-                    <span class="category-count">24 articles</span>
-                </a>
-                
-                <a href="categories.html#backend" class="category-card">
-                    <div class="category-icon">⚙️</div>
-                    <h3 class="category-title">Backend</h3>
-                    <p class="category-description">Node.js, Python, databases, APIs, and server-side development</p>
-                    <span class="category-count">18 articles</span>
-                </a>
-                
-                <a href="categories.html#devops" class="category-card">
-                    <div class="category-icon">🚀</div>
-                    <h3 class="category-title">DevOps</h3>
-                    <p class="category-description">Docker, Kubernetes, CI/CD, and infrastructure</p>
-                    <span class="category-count">12 articles</span>
-                </a>
-                
-                <a href="categories.html#algorithms" class="category-card">
-                    <div class="category-icon">🧮</div>
-                    <h3 class="category-title">Algorithms</h3>
-                    <p class="category-description">Data structures, algorithms, and problem-solving</p>
-                    <span class="category-count">16 articles</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Newsletter Section -->
-    <section class="newsletter">
-        <div class="container">
-            <div class="newsletter-content">
-                <h2 class="newsletter-title">Stay Updated</h2>
-                <p class="newsletter-description">
-                    Get the latest articles, tutorials, and tech insights delivered to your inbox.
-                </p>
-                <form class="newsletter-form" id="newsletter-form">
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                        <button type="submit" class="btn btn-primary">Subscribe</button>
-                    </div>
-                    <p class="form-note">No spam, unsubscribe at any time.</p>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-brand">
-                        <span class="logo-icon">⚡</span>
-                        <span class="logo-text">QualityPilot</span>
-                    </div>
-                    <p class="footer-description">
-                        Advanced technical blog covering software development, 
-                        coding tutorials, and tech insights.
-                    </p>
-                    <div class="social-links">
-                        <a href="#" aria-label="GitHub" class="social-link">📦</a>
-                        <a href="#" aria-label="Twitter" class="social-link">🐦</a>
-                        <a href="#" aria-label="LinkedIn" class="social-link">💼</a>
-                        <a href="#" aria-label="YouTube" class="social-link">📺</a>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <h3 class="footer-title">Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="articles.html">Articles</a></li>
-                        <li><a href="categories.html">Categories</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3 class="footer-title">Categories</h3>
-                    <ul class="footer-links">
-                        <li><a href="categories.html#frontend">Frontend</a></li>
-                        <li><a href="categories.html#backend">Backend</a></li>
-                        <li><a href="categories.html#devops">DevOps</a></li>
-                        <li><a href="categories.html#algorithms">Algorithms</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3 class="footer-title">Resources</h3>
-                    <ul class="footer-links">
-                        <li><a href="rss.xml">RSS Feed</a></li>
-                        <li><a href="sitemap.xml">Sitemap</a></li>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms of Service</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2024 QualityPilot. All rights reserved.</p>
-                <p>Built with ❤️ for the developer community</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="js/prism.js"></script>
-    <script src="js/main.js"></script>
-    
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'GA_MEASUREMENT_ID');
+        // Add some interactive elements
+        document.addEventListener('DOMContentLoaded', function() {
+            // Update progress bar randomly
+            setInterval(() => {
+                const progressBar = document.querySelector('.progress-bar');
+                const randomProgress = Math.random() * 40 + 30; // Between 30-70%
+                progressBar.style.width = randomProgress + '%';
+            }, 3000);
+
+            // Add click effect to contact links
+            const contactLinks = document.querySelectorAll('.contact-link');
+            contactLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // Create ripple effect
+                    const ripple = document.createElement('span');
+                    ripple.style.position = 'absolute';
+                    ripple.style.borderRadius = '50%';
+                    ripple.style.background = 'rgba(255, 255, 255, 0.6)';
+                    ripple.style.transform = 'scale(0)';
+                    ripple.style.animation = 'ripple 0.6s linear';
+                    ripple.style.left = e.offsetX + 'px';
+                    ripple.style.top = e.offsetY + 'px';
+                    
+                    this.style.position = 'relative';
+                    this.style.overflow = 'hidden';
+                    this.appendChild(ripple);
+                    
+                    setTimeout(() => {
+                        ripple.remove();
+                    }, 600);
+                });
+            });
+        });
+
+        // Add CSS for ripple effect
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
     </script>
 </body>
 </html> 
