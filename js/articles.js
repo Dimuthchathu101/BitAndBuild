@@ -10,96 +10,108 @@ document.addEventListener('DOMContentLoaded', function() {
 const articlesData = [
     {
         id: 1,
+        title: 'CX-Oriented QA Framework for B2B/B2C Applications: Integrating Metrics with Test Coverage',
+        excerpt: 'A comprehensive approach to quality assurance that bridges the gap between technical software quality and customer experience through integrated metrics and feedback loops.',
+        category: 'testing',
+        tags: ['Customer Experience', 'Quality Assurance', 'B2B/B2C', 'Test Coverage', 'Metrics'],
+        date: '2025-06-08',
+        readTime: 18,
+        image: 'images/cx-qa-framework.svg',
+        url: 'posts/cx-oriented-qa-framework.html',
+        featured: true
+    },
+    {
+        id: 2,
         title: 'ERP TestMaster: Building a Comprehensive Test Automation Framework',
         excerpt: 'Learn how to build a robust test automation framework for Enterprise Resource Planning systems using Playwright, GitHub Actions, and Allure Reporting.',
         category: 'testing',
         tags: ['Test Automation', 'ERP', 'Playwright', 'CI/CD', 'Quality Assurance'],
         date: '2024-12-15',
         readTime: 12,
-        image: 'images/erp-testmaster.jpg',
+        image: 'images/erp-testmaster.svg',
         url: 'posts/erp-testmaster-automation-framework.html',
-        featured: true
+        featured: false
     },
     {
-        id: 2,
+        id: 3,
         title: 'Advanced React Design Patterns for Scalable Applications',
         excerpt: 'Explore advanced React patterns including compound components, render props, and custom hooks for building maintainable and scalable applications.',
         category: 'frontend',
         tags: ['React', 'JavaScript', 'Design Patterns'],
         date: '2024-12-14',
         readTime: 8,
-        image: 'images/react-patterns.jpg',
+        image: 'images/react-patterns.svg',
         url: 'posts/react-design-patterns.html',
         featured: false
     },
     {
-        id: 3,
+        id: 4,
         title: 'Mastering TypeScript Advanced Features',
         excerpt: 'Deep dive into TypeScript\'s advanced type system, conditional types, and utility types for better type safety.',
         category: 'frontend',
         tags: ['TypeScript', 'JavaScript', 'Type Safety'],
         date: '2024-12-12',
         readTime: 12,
-        image: 'images/typescript-advanced.jpg',
+        image: 'images/typescript-advanced.svg',
         url: 'posts/typescript-advanced-features.html'
     },
     {
-        id: 4,
+        id: 5,
         title: 'Node.js Performance Optimization Techniques',
         excerpt: 'Learn advanced techniques for optimizing Node.js applications including memory management, clustering, and profiling.',
         category: 'backend',
         tags: ['Node.js', 'Performance', 'Backend'],
         date: '2024-12-10',
         readTime: 15,
-        image: 'images/node-performance.jpg',
+        image: 'images/node-performance.svg',
         url: 'posts/nodejs-performance-optimization.html'
     },
     {
-        id: 5,
+        id: 6,
         title: 'Modern CSS Grid Layout Techniques',
         excerpt: 'Master CSS Grid layout with advanced techniques for responsive design and complex layouts.',
         category: 'frontend',
         tags: ['CSS', 'Grid', 'Layout'],
         date: '2024-12-08',
         readTime: 10,
-        image: 'images/css-grid.jpg',
+        image: 'images/css-grid.svg',
         url: 'posts/modern-css-grid-layout.html'
     },
     {
-        id: 6,
+        id: 7,
         title: 'Docker Containerization Best Practices',
         excerpt: 'Learn best practices for containerizing applications with Docker, including multi-stage builds and security considerations.',
         category: 'devops',
         tags: ['Docker', 'DevOps', 'Containers'],
         date: '2024-12-05',
         readTime: 14,
-        image: 'images/docker-best-practices.jpg',
+        image: 'images/docker-best-practices.svg',
         url: 'posts/docker-containerization-best-practices.html'
     },
     {
-        id: 7,
+        id: 8,
         title: 'Algorithm Complexity Analysis',
         excerpt: 'Understanding time and space complexity analysis for algorithms and data structures.',
         category: 'algorithms',
         tags: ['Algorithms', 'Complexity', 'Data Structures'],
         date: '2024-12-03',
         readTime: 18,
-        image: 'images/algorithm-complexity.jpg',
+        image: 'images/algorithm-complexity.svg',
         url: 'posts/algorithm-complexity-analysis.html'
     },
     {
-        id: 8,
+        id: 9,
         title: 'Vue.js 3 Composition API Deep Dive',
         excerpt: 'Explore Vue.js 3 Composition API with practical examples and advanced patterns.',
         category: 'frontend',
         tags: ['Vue.js', 'JavaScript', 'Composition API'],
         date: '2024-11-30',
         readTime: 11,
-        image: 'images/vue-composition-api.jpg',
+        image: 'images/vue-composition-api.svg',
         url: 'posts/vue-js-3-composition-api.html'
     },
     {
-        id: 9,
+        id: 10,
         title: 'Python Async Programming Patterns',
         excerpt: 'Master asynchronous programming in Python with asyncio, aiohttp, and advanced patterns.',
         category: 'backend',
@@ -110,7 +122,7 @@ const articlesData = [
         url: 'posts/python-async-programming-patterns.html'
     },
     {
-        id: 9,
+        id: 11,
         title: 'Kubernetes Deployment Strategies',
         excerpt: 'Learn different deployment strategies in Kubernetes for zero-downtime deployments.',
         category: 'devops',
@@ -121,7 +133,7 @@ const articlesData = [
         url: 'posts/kubernetes-deployment-strategies.html'
     },
     {
-        id: 10,
+        id: 12,
         title: 'Dynamic Programming Problem Solving',
         excerpt: 'Master dynamic programming techniques for solving complex algorithmic problems.',
         category: 'algorithms',
@@ -187,7 +199,8 @@ function getCategoryDisplayName(category) {
         'frontend': 'Frontend',
         'backend': 'Backend',
         'devops': 'DevOps',
-        'algorithms': 'Algorithms'
+        'algorithms': 'Algorithms',
+        'testing': 'Testing'
     };
     return categoryMap[category] || category;
 }
